@@ -1,0 +1,152 @@
+package test;
+
+import java.awt.List;
+
+public class test1 {
+	static void fun1() {
+		int A01,A02,A03,A04,A05,A06,A07,A08,A09,A10,A11,A12,A13,
+	    A14,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24,A25,A26,
+	    A27,A28,A29,A30,A31;//零件上限个数
+		for(A01=0;A01<=34;A01++) {
+			for(A02=0;A02<=39;A02++) {
+				for(A03=0;A03<=95;A03++) {
+					for(A04=0;A04<=400;A04++) {
+						for(A05=0;A05<=28;A05++) {
+							for(A06=0;A06<=141;A06++) {
+								for(A07=0;A07<=255;A07++) {
+									for(A08=0;A08<=297;A08++) {
+										for(A09=0;A09<=280;A09++) {
+										  for(A10=0;A10<=51;A10++) {
+											 for(A11=0;A11<=304;A11++) {
+												 for(A12=0;A12<=21;A12++) {
+													 for(A13=0;A13<=251;A13++) {
+														 for(A14=0;A14<=11;A14++) {
+															 for(A15=0;A15<=3;A15++) {
+																 for(A16=0;A16<=225;A16++) {
+																	 for(A17=0;A17<=131;A17++) {
+																		 for(A18=0;A18<=52;A18++) {
+																			 for(A19=0;A19<=63;A19++) {
+																				 for(A20=0;A20<=15;A20++) {
+																					 for(A21=0;A21<=341;A21++) {
+																						 for(A22=0;A22<=219;A22++) {
+																							 for(A23=0;A23<=69;A23++) {
+																								 for(A24=0;A24<=118;A24++) {
+																									 for(A25=0;A25<=3;A25++) {
+																										 for(A26=0;A26<=76;A26++) {
+																											 for(A27=0;A27<=5;A27++) {
+																												 for(A28=0;A28<=16;A28++) {
+																													 for(A29=0;A29<=9;A29++) {
+																														 for(A30=0;A30<=10;A30++) {
+																															 for(A31=0;A31<=11;A31++) {
+																																 int sum =A01+A02+A03+A04+A05+A06+A07+A08+A09+A10+A11+A12+A13+A14+A15+A16+A17+A18+A19+A20+A21+
+																																		 A22+A23+A24+A25+A26+A27+A28+A29+A30+A31;
+																																 if(sum==303*6) {
+																																	 
+																																 }
+																															 }
+																														 }
+																													 }
+																												 }
+																											 }
+																										 }
+																									 }
+																								 }
+																							 }
+																						 }
+																					 }
+																				 }
+																			 }
+																		 }
+																	 }
+																 }
+															 }
+														 }
+													 }
+												 }
+											 }
+										 }
+									}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		
+	}
+	/*static void fun2(String a,String b) {//a是前一个物件，b是后一个物件
+		//判断相邻两个是不是都是底漆件；如果是则进行这次if操作，如果不是则进行else
+		if(a.substring(0,1).equals(b.substring(0,1))) {
+			if(a.substring(3,6).equals("B09")||a.substring(3,6).equals("B02")||a.substring(3,6).equals("B06")||a.substring(3,6).equals("B11")) {
+				    if(b.substring(3,6).equals("B04")||b.substring(3,6).equals("B08")) {
+				    	continue;
+				    }
+			}
+		}
+		else {
+          	//由于相邻不是两个物件		
+		}
+	}*/
+	public static void main(String[] args) {
+		int A01,A02,A03,A04,A05,A06,A07,A08,A09,A10,A11,A12,A13,
+		    A14,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24,A25,A26,
+		    A27,A28,A29,A30,A31;//零件上限个数
+		final int N=100;
+		String []str= {"A01B01","A02B01","A03B02","A03B03","A03B04","A03B05","A04B02","A04B06","A04B03","A04B04",
+				"A04B07","A04B01","A05B06","A05B04","A05B01","A06B02","A06B06","A06B03","A06B08","A07B06","A07B03",
+				"A08B02","A08B09","A08B03","A08B07","A08B08","A09B02","A09B04","A10B10","A10B07","A10B08","A11B02",
+				"A11B09","A11B06","A11B04","A11B01","A12B07","A13B06","A13B03","A13B08","A14B03","A14B01","A15B04",
+				"A16B02","A16B09","A16B03","A16B07","A16B08","A17B07","A17B08","A18B02","A18B09","A18B06","A18B04",
+				"A18B11","A18B07","A19B02","A19B06","A19B04","A20B11","A20B08","A21B02","A21B09","A21B06","A21B03",
+				"A21B04","A21B07","A21B01","A22B06","A22B03","A22B08","A23B03","A24B04","A25B07","A26B01","A27B09","A28B06",
+				"A28B04","A29B08","A30B03","A30B07","A31B11","A31B08"};
+		int max=83,min=0;//1-82
+		//StringBuffer sb=new StringBuffer();
+		String []str1=new String[1000000];
+		int n=0;
+		int n1=0;
+		for(int i=0;i<=N;i++) {
+			for(int j=0;j<=304;j++) {
+				for(int k=0;k<304;k++) {
+//					String []str1=new String[303];
+					int num=(int) (Math.random()*(max-min)+min);
+					if(str1[0]==null) {
+						str1[0]=str[num];
+//						System.out.println("111111111111111111111111111111111111111111111111111111111111111");
+//						System.out.println(str1[0]);
+					}
+					else {
+						if(str1[k-1].substring(3,6).equals(str[num].substring(3,6))) {//判断颜色是否相同
+							    	str1[k]=str[num];
+						}		
+							else {
+								str1[k]="此处插入底漆件";
+								k++;
+								if(str1[k-1].substring(3,6).equals("B09")||str1[k-1].substring(3,6).equals("B02")||str1[k-1].substring(3,6).equals("B06")||str1[k-1].substring(3,6).equals("B11")) {
+								    if(str[num].substring(3,6).equals("B04")||str[num].substring(3,6).equals("B08")) {
+								    	break;//由于不满足条件1，此次迭代结束
+								    }
+								    else {
+								    	str1[k]=str[num];
+								    }
+					}
+								else {
+									str1[k]=str[num];
+								}
+					}
+				}
+				
+					
+			}
+				int g=0;
+				for(int ii=0;ii<303;ii++) {
+					System.out.println(str1[ii]);
+//					g++;
+//					System.out.println(g);
+		}
+		}    	
+	}		
+	}}
